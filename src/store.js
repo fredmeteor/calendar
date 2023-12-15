@@ -1,4 +1,5 @@
-import { seedData } from './seed.js';
+import { reactive } from 'vue';
+import { seedData } from '../seed.js';
 
 export const store = {
   state: {
