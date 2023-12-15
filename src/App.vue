@@ -8,14 +8,14 @@
 <script>
 import CalendarWeek from './components/CalendarWeek';
 import CalendarEntry from './components/CalendarEntry';
-import CalendarDay from './components/CalendarDay';
+
 
 export default {
   name: 'App',
   components: {
     CalendarWeek,
     CalendarEntry,
-    CalendarDay
+   
 
   }
 }
