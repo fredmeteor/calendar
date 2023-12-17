@@ -29,7 +29,7 @@ html, body, #app {
 
 <style lang="scss" scoped>
 #app {
-  background: #6e6e6e;
+  background: #ec9706;
   display: flex;
   flex-direction: column;
   align-items: center;

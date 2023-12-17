@@ -16,13 +16,8 @@ activeDay.events.push({ "details": eventDetails, "edit": false });
 
 },
 editEvent (dayId, eventDetails) {
-    this.resetEditOfAllEvents();
-    const dayObj = this.state.data.find(
-      day => day.id === dayId
-    );
-    const eventObj = dayObj.events.find(
-      event => event.details === eventDetails
-    );
+     this.resetEditOfAllEvents();
+    const eventObj = this.getEventObj(dayId, eventDetails);
     eventObj.edit = true;
   },
   resetEditOfAllEvents () {
@@ -32,6 +27,13 @@ editEvent (dayId, eventDetails) {
       });
     });
   },
+  updateEvent(dayId, originalEventDetails, newEventDetails) {
+
+const eventObj = this.getEventObj(dayId, originalEventDetails);
+    eventObj.details = newEventDetails;
+    eventObj.edit = false;
+},
+
 
 setActiveDay (dayId) {
     this.state.data.map((dayObj) => {
